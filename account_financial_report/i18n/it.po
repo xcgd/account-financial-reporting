@@ -340,6 +340,11 @@ msgid "Analytic Account"
 msgstr "Filtro conto"
 
 #. module: account_financial_report
+#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
+msgid "Assigned accounts."
+msgstr "Conti assegnati."
+
+#. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_taxes
 msgid "Balance"
@@ -881,9 +886,14 @@ msgid "From:"
 msgstr ""
 
 #. module: account_financial_report
+#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
+#, fuzzy, python-format
+msgid "From: %(date_from)s To: %(date_to)s"
+msgstr "Da: %s A: %s"
+
+#. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
 #: code:addons/account_financial_report/report/journal_ledger_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #, python-format
 msgid "From: %s To: %s"
 msgstr "Da: %s A: %s"
@@ -2018,6 +2028,3 @@ msgstr ""
 
 #~ msgid "Tax Name"
 #~ msgstr "Nome imposta"
-
-#~ msgid "Assigned accounts."
-#~ msgstr "Conti assegnati."

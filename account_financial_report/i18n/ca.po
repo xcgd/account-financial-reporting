@@ -343,6 +343,12 @@ msgid "Analytic Account"
 msgstr "Compte analític"
 
 #. module: account_financial_report
+#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
+#, fuzzy
+msgid "Assigned accounts."
+msgstr "Filtrar comptes"
+
+#. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_taxes
 msgid "Balance"
@@ -884,9 +890,14 @@ msgid "From:"
 msgstr "Des de:"
 
 #. module: account_financial_report
+#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
+#, fuzzy, python-format
+msgid "From: %(date_from)s To: %(date_to)s"
+msgstr "Des de: %s fins: %s"
+
+#. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
 #: code:addons/account_financial_report/report/journal_ledger_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #, python-format
 msgid "From: %s To: %s"
 msgstr "Des de: %s fins: %s"

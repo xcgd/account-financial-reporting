@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-01 22:18+0000\n"
+"POT-Creation-Date: 2022-09-13 10:04+0000\n"
 "PO-Revision-Date: 2019-02-14 13:16+0000\n"
 "Last-Translator: Thorsten Vocks <thorsten.vocks@big-consulting.net>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
@@ -343,6 +343,12 @@ msgstr "Betragwähr."
 #, fuzzy, python-format
 msgid "Analytic Account"
 msgstr "Konten filtern"
+
+#. module: account_financial_report
+#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
+#, fuzzy
+msgid "Assigned accounts."
+msgstr "Unterkonto"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
@@ -880,9 +886,14 @@ msgid "From:"
 msgstr "Von:"
 
 #. module: account_financial_report
+#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
+#, fuzzy, python-format
+msgid "From: %(date_from)s To: %(date_to)s"
+msgstr "Von: %s Bis: %s"
+
+#. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
 #: code:addons/account_financial_report/report/journal_ledger_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #, python-format
 msgid "From: %s To: %s"
 msgstr "Von: %s Bis: %s"
@@ -1973,11 +1984,6 @@ msgstr "Breite: 8,11%;"
 
 #~ msgid "Centralized Entries"
 #~ msgstr "Zusammengefasste Buchungen"
-
-#, fuzzy
-#~| msgid "Child Accounts"
-#~ msgid "Child accounts"
-#~ msgstr "Unterkonto"
 
 #, fuzzy
 #~ msgid "Company Currency"
