@@ -6,6 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 10:04+0000\n"
 "PO-Revision-Date: 2019-08-02 09:44+0000\n"
 "Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
 "Language-Team: none\n"
@@ -336,6 +337,12 @@ msgstr "Moeda."
 #, fuzzy, python-format
 msgid "Analytic Account"
 msgstr "Filtrar Conta"
+
+#. module: account_financial_report
+#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
+#, fuzzy
+msgid "Assigned accounts."
+msgstr "Contas filhas"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
@@ -884,9 +891,14 @@ msgid "From:"
 msgstr "De:"
 
 #. module: account_financial_report
+#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
+#, fuzzy, python-format
+msgid "From: %(date_from)s To: %(date_to)s"
+msgstr "De: %s Até: %s"
+
+#. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
 #: code:addons/account_financial_report/report/journal_ledger_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #, python-format
 msgid "From: %s To: %s"
 msgstr "De: %s Até: %s"
@@ -1974,9 +1986,6 @@ msgstr "largura: 8.11%;"
 
 #~ msgid "Centralized Entries"
 #~ msgstr "Lançamentos Centralizados"
-
-#~ msgid "Child accounts"
-#~ msgstr "Contas filhas"
 
 #~ msgid "Company Currency"
 #~ msgstr "Moeda da Empresa"
