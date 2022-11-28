@@ -169,6 +169,7 @@ msgstr "Activer la centralisation"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Additional Filtering"
 msgstr "Filtres additionnels"
 
@@ -824,6 +825,7 @@ msgstr "Export XLSX"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__account_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__account_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter accounts"
 msgstr "Filtrer les comptes"
 
@@ -854,6 +856,7 @@ msgstr "Filtrer les journaux"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__partner_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__partner_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter partners"
 msgstr "Filtrer les partenaires"
 
@@ -1072,6 +1075,7 @@ msgstr "Écriture comptable"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "Journal Items Domain"
 msgstr "Domaine des éléments du journal"
 
@@ -1697,6 +1701,7 @@ msgstr "Le niveau de hiérarchie à filtrer doit être plus rand que 0."
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,help:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "This domain will be used to select specific domain for Journal Items"
 msgstr ""
 "Ce domaine sera utilisé pour sélectionner des domaines spécifiques pour les "
@@ -1906,4 +1911,3 @@ msgstr "width: 38.92%;"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 msgid "width: 8.11%;"
 msgstr "width: 8.11%;"
-

@@ -22,6 +22,7 @@ class TrialBalanceReport(models.AbstractModel):
         date_from,
         only_posted_moves,
         show_partner_details,
+        extra_domain,
     ):
         accounts_domain = [
             ("company_id", "=", company_id),
@@ -44,6 +45,8 @@ class TrialBalanceReport(models.AbstractModel):
             domain += [("move_id.state", "in", ["posted", "draft"])]
         if show_partner_details:
             domain += [("account_id.internal_type", "in", ["receivable", "payable"])]
+        if extra_domain:
+            domain += extra_domain
         return domain
 
     def _get_initial_balances_pl_ml_domain(
@@ -56,6 +59,7 @@ class TrialBalanceReport(models.AbstractModel):
         only_posted_moves,
         show_partner_details,
         fy_start_date,
+        extra_domain,
     ):
         accounts_domain = [
             ("company_id", "=", company_id),
@@ -78,6 +82,8 @@ class TrialBalanceReport(models.AbstractModel):
             domain += [("move_id.state", "in", ["posted", "draft"])]
         if show_partner_details:
             domain += [("account_id.internal_type", "in", ["receivable", "payable"])]
+        if extra_domain:
+            domain += extra_domain
         return domain
 
     @api.model
@@ -91,6 +97,7 @@ class TrialBalanceReport(models.AbstractModel):
         date_from,
         only_posted_moves,
         show_partner_details,
+        extra_domain,
     ):
         domain = [
             ("display_type", "=", False),
@@ -111,6 +118,8 @@ class TrialBalanceReport(models.AbstractModel):
             domain += [("move_id.state", "in", ["posted", "draft"])]
         if show_partner_details:
             domain += [("account_id.internal_type", "in", ["receivable", "payable"])]
+        if extra_domain:
+            domain += extra_domain
         return domain
 
     def _get_initial_balance_fy_pl_ml_domain(
@@ -122,6 +131,7 @@ class TrialBalanceReport(models.AbstractModel):
         fy_start_date,
         only_posted_moves,
         show_partner_details,
+        extra_domain,
     ):
         accounts_domain = [
             ("company_id", "=", company_id),
@@ -144,6 +154,8 @@ class TrialBalanceReport(models.AbstractModel):
             domain += [("move_id.state", "in", ["posted", "draft"])]
         if show_partner_details:
             domain += [("account_id.internal_type", "in", ["receivable", "payable"])]
+        if extra_domain:
+            domain += extra_domain
         return domain
 
     def _get_pl_initial_balance(
@@ -156,6 +168,7 @@ class TrialBalanceReport(models.AbstractModel):
         only_posted_moves,
         show_partner_details,
         foreign_currency,
+        extra_domain,
     ):
         domain = self._get_initial_balance_fy_pl_ml_domain(
             account_ids,
@@ -165,6 +178,7 @@ class TrialBalanceReport(models.AbstractModel):
             fy_start_date,
             only_posted_moves,
             show_partner_details,
+            extra_domain,
         )
         initial_balances = self.env["account.move.line"].read_group(
             domain=domain,
@@ -296,6 +310,7 @@ class TrialBalanceReport(models.AbstractModel):
         hide_account_at_0,
         unaffected_earnings_account,
         fy_start_date,
+        extra_domain,
     ):
         accounts_domain = [("company_id", "=", company_id)]
         if account_ids:
@@ -317,6 +332,7 @@ class TrialBalanceReport(models.AbstractModel):
             date_from,
             only_posted_moves,
             show_partner_details,
+            extra_domain,
         )
         tb_initial_acc_bs = self.env["account.move.line"].read_group(
             domain=initial_domain_bs,
@@ -332,6 +348,7 @@ class TrialBalanceReport(models.AbstractModel):
             only_posted_moves,
             show_partner_details,
             fy_start_date,
+            extra_domain,
         )
         tb_initial_acc_pl = self.env["account.move.line"].read_group(
             domain=initial_domain_pl,
@@ -362,6 +379,7 @@ class TrialBalanceReport(models.AbstractModel):
             date_from,
             only_posted_moves,
             show_partner_details,
+            extra_domain,
         )
         tb_period_acc = self.env["account.move.line"].read_group(
             domain=period_domain,
@@ -433,6 +451,7 @@ class TrialBalanceReport(models.AbstractModel):
             only_posted_moves,
             show_partner_details,
             foreign_currency,
+            extra_domain,
         )
         if unaffected_id:
             total_amount[unaffected_id]["ending_balance"] += pl_initial_balance
@@ -711,6 +730,7 @@ class TrialBalanceReport(models.AbstractModel):
         only_posted_moves = data["only_posted_moves"]
         unaffected_earnings_account = data["unaffected_earnings_account"]
         fy_start_date = data["fy_start_date"]
+        extra_domain = data["domain"]
         total_amount, accounts_data, partners_data = self._get_data(
             account_ids,
             journal_ids,
@@ -724,6 +744,7 @@ class TrialBalanceReport(models.AbstractModel):
             hide_account_at_0,
             unaffected_earnings_account,
             fy_start_date,
+            extra_domain,
         )
         trial_balance = []
         if not show_partner_details:
