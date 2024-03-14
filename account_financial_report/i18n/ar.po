@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-13 10:04+0000\n"
+"POT-Creation-Date: 2024-03-14 14:44+0000\n"
 "PO-Revision-Date: 2018-09-23 16:01+0000\n"
 "Last-Translator: yaseentai <eltahiryaseen@outlook.com>\n"
 "Language-Team: none\n"
@@ -163,6 +163,7 @@ msgstr "تجميع القيود"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Additional Filtering"
 msgstr ""
 
@@ -330,12 +331,6 @@ msgstr "القيمة بالعملة."
 #, fuzzy, python-format
 msgid "Analytic Account"
 msgstr "ترشيح الحسابات"
-
-#. module: account_financial_report
-#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
-#, fuzzy
-msgid "Assigned accounts."
-msgstr "حسابات فرعية"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
@@ -809,6 +804,7 @@ msgstr "طباعة إكسل"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__account_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__account_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter accounts"
 msgstr "‫ترشيح الحسابات"
 
@@ -842,6 +838,7 @@ msgstr "‫ترشيح الحسابات"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__partner_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__partner_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter partners"
 msgstr "ترشيح الشركاء"
 
@@ -1061,6 +1058,7 @@ msgstr "اليومية"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "Journal Items Domain"
 msgstr ""
 
@@ -1174,6 +1172,14 @@ msgstr "المستوى"
 #, python-format
 msgid "Limit hierarchy levels"
 msgstr ""
+
+#. module: account_financial_report
+#: code:addons/account_financial_report/report/general_ledger.py:0
+#: code:addons/account_financial_report/report/open_items.py:0
+#: code:addons/account_financial_report/report/trial_balance.py:0
+#, fuzzy, python-format
+msgid "Missing Partner"
+msgstr "الشريك"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__move_target
@@ -1683,6 +1689,7 @@ msgstr ""
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,help:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "This domain will be used to select specific domain for Journal Items"
 msgstr ""
 
@@ -1886,6 +1893,10 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 msgid "width: 8.11%;"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Assigned accounts."
+#~ msgstr "حسابات فرعية"
 
 #~ msgid "<span class=\"fa fa-download\"/> Export"
 #~ msgstr "<span class=\"fa fa-download\"/> ‫تصدير"

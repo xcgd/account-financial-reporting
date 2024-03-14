@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-16 08:14+0000\n"
+"POT-Creation-Date: 2024-03-14 14:44+0000\n"
 "PO-Revision-Date: 2023-06-23 13:11+0000\n"
 "Last-Translator: eccit-quim <quim@eccit.com>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
@@ -169,6 +169,7 @@ msgstr "Activar centralització"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Additional Filtering"
 msgstr "Filtratge addicional"
 
@@ -341,12 +342,6 @@ msgstr "Total Act."
 #, python-format
 msgid "Analytic Account"
 msgstr "Compte analític"
-
-#. module: account_financial_report
-#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
-#, fuzzy
-msgid "Assigned accounts."
-msgstr "Filtrar comptes"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
@@ -837,6 +832,7 @@ msgstr "Exportar XLSX"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__account_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__account_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter accounts"
 msgstr "Filtrar comptes"
 
@@ -867,6 +863,7 @@ msgstr "Filtrar diaris"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__partner_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__partner_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter partners"
 msgstr "Filtrar empreses"
 
@@ -1085,6 +1082,7 @@ msgstr "Apunt comptable"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "Journal Items Domain"
 msgstr "Domini d'apunts comptables"
 
@@ -1195,6 +1193,14 @@ msgstr "Nivell %s"
 #, python-format
 msgid "Limit hierarchy levels"
 msgstr "Limitar els nivells de jerarquia"
+
+#. module: account_financial_report
+#: code:addons/account_financial_report/report/general_ledger.py:0
+#: code:addons/account_financial_report/report/open_items.py:0
+#: code:addons/account_financial_report/report/trial_balance.py:0
+#, fuzzy, python-format
+msgid "Missing Partner"
+msgstr "Empresa"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__move_target
@@ -1710,6 +1716,7 @@ msgstr "El nivell de jerarquia a filtrar ha de ser major que 0."
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,help:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "This domain will be used to select specific domain for Journal Items"
 msgstr ""
 "Aquest domini es farà servir per a seleccionar dominis específics per apunts "
@@ -1919,6 +1926,10 @@ msgstr "ample: 38,92%;"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 msgid "width: 8.11%;"
 msgstr "ample: 8,11%;"
+
+#, fuzzy
+#~ msgid "Assigned accounts."
+#~ msgstr "Filtrar comptes"
 
 #~ msgid "<span class=\"fa fa-download\"/> Export"
 #~ msgstr "<span class=\"fa fa-download\"/>Exportar"

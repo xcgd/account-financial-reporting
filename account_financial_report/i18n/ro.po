@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-13 10:04+0000\n"
+"POT-Creation-Date: 2024-03-14 14:44+0000\n"
 "PO-Revision-Date: 2020-09-25 10:00+0000\n"
 "Last-Translator: Dorin Hongu <dhongu@gmail.com>\n"
 "Language-Team: Romanian (https://www.transifex.com/oca/teams/23907/ro/)\n"
@@ -171,6 +171,7 @@ msgstr "Activare centralizare"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Additional Filtering"
 msgstr "Filtrare suplimentară"
 
@@ -343,12 +344,6 @@ msgstr ""
 #, python-format
 msgid "Analytic Account"
 msgstr "Cont analitic"
-
-#. module: account_financial_report
-#: model:ir.model.fields,help:account_financial_report.field_account_group__account_ids
-#, fuzzy
-msgid "Assigned accounts."
-msgstr "Contrui filtrate"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_all_taxes
@@ -826,6 +821,7 @@ msgstr "Exportați XLSX"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__account_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__account_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter accounts"
 msgstr "Contrui filtrate"
 
@@ -856,6 +852,7 @@ msgstr "Filtrează Jurnale"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__partner_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__partner_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter partners"
 msgstr "Filtru partener"
 
@@ -1070,6 +1067,7 @@ msgstr "Articol de jurnal"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "Journal Items Domain"
 msgstr "Domeniul articolelor din jurnal"
 
@@ -1183,6 +1181,14 @@ msgstr "Nivel %s"
 #, python-format
 msgid "Limit hierarchy levels"
 msgstr "Limitați nivelurile de ierarhie"
+
+#. module: account_financial_report
+#: code:addons/account_financial_report/report/general_ledger.py:0
+#: code:addons/account_financial_report/report/open_items.py:0
+#: code:addons/account_financial_report/report/trial_balance.py:0
+#, fuzzy, python-format
+msgid "Missing Partner"
+msgstr "Partenr"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__move_target
@@ -1686,6 +1692,7 @@ msgstr "Nivelul de ierarhie de filtrat trebuie să fie mai mare de 0."
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,help:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "This domain will be used to select specific domain for Journal Items"
 msgstr ""
 "Acest domeniu va fi utilizat pentru a selecta un domeniu specific pentru "
@@ -1897,6 +1904,10 @@ msgstr "lățime: 38,92%;"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 msgid "width: 8.11%;"
 msgstr "lățime: 8,11%;"
+
+#, fuzzy
+#~ msgid "Assigned accounts."
+#~ msgstr "Contrui filtrate"
 
 #~ msgid "<span class=\"fa fa-download\"/> Export"
 #~ msgstr "<span class=\"fa fa-download\"/>Exportă"
