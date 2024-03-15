@@ -5,7 +5,7 @@
 import operator
 from datetime import date, datetime
 
-from odoo import api, models
+from odoo import _, api, models
 from odoo.tools import float_is_zero
 
 
@@ -48,24 +48,7 @@ class OpenItemsReport(models.AbstractModel):
         domain = self._get_move_lines_domain_not_reconciled(
             company_id, account_ids, partner_ids, only_posted_moves, date_from
         )
-        ml_fields = [
-            "id",
-            "name",
-            "date",
-            "move_id",
-            "journal_id",
-            "account_id",
-            "partner_id",
-            "amount_residual",
-            "date_maturity",
-            "ref",
-            "debit",
-            "credit",
-            "reconciled",
-            "currency_id",
-            "amount_currency",
-            "amount_residual_currency",
-        ]
+        ml_fields = self._get_ml_fields()
         move_lines = self.env["account.move.line"].search_read(
             domain=domain, fields=ml_fields
         )
@@ -115,7 +98,7 @@ class OpenItemsReport(models.AbstractModel):
                 prt_name = move_line["partner_id"][1]
             else:
                 prt_id = 0
-                prt_name = "Missing Partner"
+                prt_name = _("Missing Partner")
             if prt_id not in partners_ids:
                 partners_data.update({prt_id: {"id": prt_id, "name": prt_name}})
                 partners_ids.add(prt_id)
@@ -270,3 +253,13 @@ class OpenItemsReport(models.AbstractModel):
             "total_amount": total_amount,
             "Open_Items": open_items_move_lines_data,
         }
+
+    def _get_ml_fields(self):
+        return self.COMMON_ML_FIELDS + [
+            "reconciled",
+            "currency_id",
+            "amount_residual",
+            "date_maturity",
+            "amount_residual_currency",
+            "amount_currency",
+        ]

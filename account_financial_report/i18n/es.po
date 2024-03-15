@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-21 15:29+0000\n"
+"POT-Creation-Date: 2024-03-14 14:44+0000\n"
 "PO-Revision-Date: 2022-09-21 17:30+0200\n"
 "Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>\n"
 "Language-Team: \n"
@@ -167,6 +167,7 @@ msgstr "Activar centralización"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Additional Filtering"
 msgstr "Filtrado adicional"
 
@@ -528,10 +529,8 @@ msgstr "Saldo Acumu."
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/open_items_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_open_items_lines_header
-#: model_terms:ir.ui.view,arch_db:account_financial_report.report_trial_balance_lines_header
 #, python-format
 msgid "Cur."
 msgstr "Moneda"
@@ -836,6 +835,7 @@ msgstr "Exportar a XLSX"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__account_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__account_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter accounts"
 msgstr "Filtro Cuentas"
 
@@ -866,6 +866,7 @@ msgstr "Filtrar por diarios"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__partner_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__partner_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter partners"
 msgstr "Filtrar empresa"
 
@@ -1084,6 +1085,7 @@ msgstr "Apunte contable"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "Journal Items Domain"
 msgstr "Dominio Apuntes Contables"
 
@@ -1194,6 +1196,14 @@ msgstr "Nivel %s"
 #, python-format
 msgid "Limit hierarchy levels"
 msgstr "Limitar niveles de jerarquía"
+
+#. module: account_financial_report
+#: code:addons/account_financial_report/report/general_ledger.py:0
+#: code:addons/account_financial_report/report/open_items.py:0
+#: code:addons/account_financial_report/report/trial_balance.py:0
+#, fuzzy, python-format
+msgid "Missing Partner"
+msgstr "Empresa"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__move_target
@@ -1709,6 +1719,7 @@ msgstr "El nivel de jerarquía a filtrar debe ser mayor que 0."
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,help:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "This domain will be used to select specific domain for Journal Items"
 msgstr ""
 "Este dominio se usará para seleccionar dominios específicos para Apuntes "
@@ -1918,3 +1929,7 @@ msgstr "ancho: 38.92%;"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 msgid "width: 8.11%;"
 msgstr "ancho: 8.11%;"
+
+#, fuzzy
+#~ msgid "Assigned accounts."
+#~ msgstr "Filtro Cuentas"

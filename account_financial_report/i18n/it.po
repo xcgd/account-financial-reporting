@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-13 10:04+0000\n"
-"PO-Revision-Date: 2019-07-19 11:43+0000\n"
-"Last-Translator: Marco Calcagni <mcalcagni@dinamicheaziendali.it>\n"
+"POT-Creation-Date: 2024-03-14 14:44+0000\n"
+"PO-Revision-Date: 2024-03-01 11:41+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: \n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_aged_partner_balance_lines_header
@@ -164,6 +164,7 @@ msgstr "Attivare centralizzazione"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Additional Filtering"
 msgstr ""
 
@@ -526,10 +527,8 @@ msgstr "Saldo progr."
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/open_items_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_open_items_lines_header
-#: model_terms:ir.ui.view,arch_db:account_financial_report.report_trial_balance_lines_header
 #, python-format
 msgid "Cur."
 msgstr "Val."
@@ -618,7 +617,7 @@ msgstr "Dalla data"
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__date_range_id
 #: model:ir.model.fields,field_description:account_financial_report.field_vat_report_wizard__date_range_id
 msgid "Date range"
-msgstr "Intervallo di date"
+msgstr "Intervallo date"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
@@ -833,6 +832,7 @@ msgstr "Esporta XLSX"
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__account_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__account_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter accounts"
 msgstr "Filtro conti"
 
@@ -864,6 +864,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_financial_report.field_open_items_report_wizard__partner_ids
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__partner_ids
 #: model_terms:ir.ui.view,arch_db:account_financial_report.general_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
 msgid "Filter partners"
 msgstr "Filtro partner"
 
@@ -1073,7 +1074,7 @@ msgstr "Saldo iniziale"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_open_items_lines_header
 #, python-format
 msgid "Journal"
-msgstr "Sezionale"
+msgstr "Registro"
 
 #. module: account_financial_report
 #: model:ir.model,name:account_financial_report.model_account_move_line
@@ -1082,6 +1083,7 @@ msgstr "Movimento contabile"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "Journal Items Domain"
 msgstr ""
 
@@ -1194,6 +1196,14 @@ msgstr ""
 #, python-format
 msgid "Limit hierarchy levels"
 msgstr "Limitare i livelli della gerarchia"
+
+#. module: account_financial_report
+#: code:addons/account_financial_report/report/general_ledger.py:0
+#: code:addons/account_financial_report/report/open_items.py:0
+#: code:addons/account_financial_report/report/trial_balance.py:0
+#, fuzzy, python-format
+msgid "Missing Partner"
+msgstr "Filtro partner"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__move_target
@@ -1564,7 +1574,7 @@ msgstr "Data inizio"
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__date_from
 msgid "Start date"
-msgstr "Data iniziale"
+msgstr "Data inizio"
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_aged_partner_balance_report_wizard__account_code_from
@@ -1588,7 +1598,7 @@ msgstr "Etichette"
 #: model:ir.model.fields,field_description:account_financial_report.field_trial_balance_report_wizard__target_move
 #: model:ir.model.fields,field_description:account_financial_report.field_vat_report_wizard__target_move
 msgid "Target Moves"
-msgstr "Obiettivo"
+msgstr "Movimenti obiettivo"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/aged_partner_balance_xlsx.py:0
@@ -1708,6 +1718,7 @@ msgstr ""
 
 #. module: account_financial_report
 #: model:ir.model.fields,help:account_financial_report.field_general_ledger_report_wizard__domain
+#: model:ir.model.fields,help:account_financial_report.field_trial_balance_report_wizard__domain
 msgid "This domain will be used to select specific domain for Journal Items"
 msgstr ""
 
@@ -1913,6 +1924,9 @@ msgstr ""
 msgid "width: 8.11%;"
 msgstr ""
 
+#~ msgid "Assigned accounts."
+#~ msgstr "Conti assegnati."
+
 #~ msgid "<span class=\"fa fa-download\"/> Export"
 #~ msgstr "<span class=\"fa fa-download\"/> Esporta"
 
@@ -1994,9 +2008,6 @@ msgstr ""
 
 #~ msgid "Filter Analytic Tag"
 #~ msgstr "Filtro tag analitico"
-
-#~ msgid "Filter Partner"
-#~ msgstr "Filtro partner"
 
 #~ msgid "Final Balance Foreign Currency"
 #~ msgstr "Saldo finale valuta estera"

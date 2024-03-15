@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-28 14:02+0000\n"
-"PO-Revision-Date: 2022-11-28 15:03+0100\n"
+"POT-Creation-Date: 2024-03-14 14:44+0000\n"
+"PO-Revision-Date: 2024-03-14 15:46+0100\n"
 "Last-Translator: Vincent Hatakeyama <vincent.hatakeyama@xcg-consulting.fr>\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_aged_partner_balance_lines_header
@@ -523,10 +523,8 @@ msgstr "Solde"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/open_items_xlsx.py:0
-#: code:addons/account_financial_report/report/trial_balance_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_open_items_lines_header
-#: model_terms:ir.ui.view,arch_db:account_financial_report.report_trial_balance_lines_header
 #, python-format
 msgid "Cur."
 msgstr "Devise"
@@ -963,7 +961,7 @@ msgstr "Grouper les entrées par"
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_general_ledger_report_wizard__grouped_by
 msgid "Grouped by"
-msgstr ""
+msgstr "Regrouper par"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
@@ -1190,6 +1188,14 @@ msgid "Limit hierarchy levels"
 msgstr "Limiter les niveaux de hiérarchie"
 
 #. module: account_financial_report
+#: code:addons/account_financial_report/report/general_ledger.py:0
+#: code:addons/account_financial_report/report/open_items.py:0
+#: code:addons/account_financial_report/report/trial_balance.py:0
+#, python-format
+msgid "Missing Partner"
+msgstr "Partenaire manquant"
+
+#. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_journal_ledger_report_wizard__move_target
 msgid "Move Target"
 msgstr "Mouvement cible"
@@ -1246,7 +1252,7 @@ msgstr "Sans limite"
 #. module: account_financial_report
 #: model:ir.model.fields.selection,name:account_financial_report.selection__general_ledger_report_wizard__grouped_by__
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/wizard/journal_ledger_wizard.py:0
@@ -1378,12 +1384,12 @@ msgstr "Solde de clôture du partenaire"
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_general_ledger_lines
 msgid "Partner initial balance"
-msgstr ""
+msgstr "Solde initiale du partenaire"
 
 #. module: account_financial_report
 #: model:ir.model.fields.selection,name:account_financial_report.selection__general_ledger_report_wizard__grouped_by__partners
 msgid "Partners"
-msgstr ""
+msgstr "Partenaires"
 
 #. module: account_financial_report
 #: model:ir.model.fields,field_description:account_financial_report.field_aged_partner_balance_report_wizard__payable_accounts_only
@@ -1635,7 +1641,7 @@ msgstr "Groupes de taxe"
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
 #, python-format
 msgid "Tax Initial balance"
-msgstr ""
+msgstr "Solde initial des taxes"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/vat_report_xlsx.py:0
@@ -1649,12 +1655,12 @@ msgstr "Étiquettes de taxe"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_general_ledger_ending_cumul
 #, python-format
 msgid "Tax ending balance"
-msgstr ""
+msgstr "Solde final des taxes"
 
 #. module: account_financial_report
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_general_ledger_lines
 msgid "Tax initial balance"
-msgstr ""
+msgstr "Solde initial des taxes"
 
 #. module: account_financial_report
 #: code:addons/account_financial_report/report/general_ledger_xlsx.py:0
@@ -1913,3 +1919,6 @@ msgstr "width: 38.92%;"
 #: model_terms:ir.ui.view,arch_db:account_financial_report.report_journal_ledger_journal_table_header
 msgid "width: 8.11%;"
 msgstr "width: 8.11%;"
+
+#~ msgid "Assigned accounts."
+#~ msgstr "Comptes assignés."
